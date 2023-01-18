@@ -7,6 +7,8 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.apache.http.Header;
 import org.apache.http.HttpStatus;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,8 +24,11 @@ import static io.restassured.path.json.JsonPath.from;
 
 public class RegRestTests {
 
+    private static final Logger logger = LogManager.getLogger(RegRestTests.class);
     @BeforeEach
     public void setup(){
+
+        logger.info("Iniciando la configuracion");
 
         RestAssured.baseURI = "https://reqres.in"; // El baseURI es el dominio sin el path, en este caso https://reqres.in
         RestAssured.basePath = "/api"; // El basePath es la palabra que sigue despues del host en este caso /api
@@ -32,6 +37,7 @@ public class RegRestTests {
         RestAssured.requestSpecification =  new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 .build();
+        logger.info("Configuracion exitosa.");
     }
     @Test
     public void loginTest(){
@@ -175,5 +181,29 @@ public class RegRestTests {
         System.out.println(user.getId());
         System.out.println(user.getJob());
     }
+
+
+    //Esta es la mejor forma de manejar las respuestas de APIS por medio de objetos
+    @Test
+    public void registerUserTest(){
+
+        CreateUserRequest user = new CreateUserRequest();
+        user.setEmail("eve.holt@reqres.in");
+        user.setPassword("pistol");
+
+        CreateUserResponse userResponse = given()
+                .when()
+                .body(user)
+                .post("register")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .contentType(equalTo("application/json; charset=utf-8"))
+                .extract()
+                .body()
+                .as(CreateUserResponse.class);
+        assertThat(userResponse.getId(),equalTo(4));
+        assertThat(userResponse.getToken(),equalTo("QpwL5tke4Pnpja7X4"));
+    }
+
 }
 

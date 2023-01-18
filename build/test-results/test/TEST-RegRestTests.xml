@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RegRestTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-18T20:11:16" hostname="DESKTOP-9ETNGU6" time="152.958">
+<testsuite name="RegRestTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-18T21:05:30" hostname="DESKTOP-9ETNGU6" time="2.27">
   <properties/>
-  <testcase name="createUserTest()" classname="RegRestTests" time="152.958"/>
-  <system-out><![CDATA[Request method:	POST
-Request URI:	https://reqres.in/api/users
+  <testcase name="loginTest()" classname="RegRestTests" time="2.27"/>
+  <system-out><![CDATA[2023-01-18T13:05:30,457 [Test worker] INFO  (RegRestTests.java:31) - Iniciando la configuracion
+2023-01-18T13:05:30,882 [Test worker] INFO  (RegRestTests.java:40) - Configuracion exitosa.
+Request method:	POST
+Request URI:	https://reqres.in/api/login
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -15,32 +17,27 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "name": "morpheus",
-    "job": "leader"
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
 }
-HTTP/1.1 201 Created
-Date: Wed, 18 Jan 2023 20:11:19 GMT
+HTTP/1.1 200 OK
+Date: Wed, 18 Jan 2023 21:05:33 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 84
+Content-Length: 29
 Connection: keep-alive
 X-Powered-By: Express
 Access-Control-Allow-Origin: *
-Etag: W/"54-2u3sv9UvBBTo6sWe2FYuvqsubFY"
+Etag: W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=p8EtRmYMf03fVkpFWQKDT8YAca%2FELiCyJEjkLGHyDClcs1Fojy%2Bq%2FXfQtCU051gI83eI6cxeKFYneIZVikAPdVuCou30od%2FhUITzh8ZTr1YL5or7lf6WGQ5KNg%3D%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hct8fOOncWYiSjkJoH7sRSKPD04psFXh0hVdd9WZIJ14DagFs8Sq0UymA7KqpFeClUAMWZd0l%2BEFjugrobFI6zVmAtFqOyRBRfpjuSN%2FtU7weIeNyUUINRbQXg%3D%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78b9faa6bbef2e54-DFW
+CF-RAY: 78ba4a15be26e4ac-DFW
 
 {
-    "name": "morpheus",
-    "job": "leader",
-    "id": "420",
-    "createdAt": "2023-01-18T20:11:19.679Z"
+    "token": "QpwL5tke4Pnpja7X4"
 }
-420
-leader
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
