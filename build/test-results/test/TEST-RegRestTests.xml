@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RegRestTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-01-18T02:55:26" hostname="DESKTOP-9ETNGU6" time="2.398">
+<testsuite name="RegRestTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-01-18T03:58:11" hostname="DESKTOP-9ETNGU6" time="2.345">
   <properties/>
-  <testcase name="loginTest()" classname="RegRestTests" time="2.163"/>
-  <testcase name="getSingleUserTest()" classname="RegRestTests" time="0.234"/>
+  <testcase name="loginTest()" classname="RegRestTests" time="2.091"/>
+  <testcase name="getSingleUserTest()" classname="RegRestTests" time="0.253"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://reqres.in/api/login
 Proxy:			<none>
@@ -20,7 +20,7 @@ Body:
     "password": "cityslicka"
 }
 HTTP/1.1 200 OK
-Date: Wed, 18 Jan 2023 02:55:29 GMT
+Date: Wed, 18 Jan 2023 03:58:14 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 29
 Connection: keep-alive
@@ -29,10 +29,10 @@ Access-Control-Allow-Origin: *
 Etag: W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Mk8Q1j4zeSKf3WNZ3yF3rD37myBB6f4p5U7ntwpdBnvWB8J6Nv3S3gpT8NEG5jRZyqDBNLhU0Lcvq8oXguor7YzGkplNnJ3bo%2Fx0e6TbJk%2FIpNt9xNhnET4Ahw%3D%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EjX0cwOA9wo6w8pVmn3RnEHc3dSiaM0NgjvvIu49f9fdhQxrh7cZ%2FCNu67HxPJUncMc67xsew4MxR2GTyITOSWpEk%2BZk6MmhFc7VPrYAtn6gxYHYgsaUyK2GMw%3D%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 78b40d4d4ecfe95e-DFW
+CF-RAY: 78b469394d36e736-DFW
 
 {
     "token": "QpwL5tke4Pnpja7X4"
@@ -49,8 +49,20 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+Request method:	GET
+Request URI:	https://reqres.in/api/users/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
 HTTP/1.1 200 OK
-Date: Wed, 18 Jan 2023 02:55:29 GMT
+Date: Wed, 18 Jan 2023 03:58:14 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -60,12 +72,44 @@ Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
 Via: 1.1 vegur
 Cache-Control: max-age=14400
 CF-Cache-Status: HIT
-Age: 1264
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5k1EgoD0XD8N0EoszWcM9xQBn25fAwPyZrguahpo9BFJP8hhOW82VeOOW86A815ss5vsDdLCzrzEJ5DLTyuzK3WYul1rkkD3MT5ZIRGEuKrpO7Jey%2BSW2BIt6Q%3D%3D"}],"group":"cf-nel","max_age":604800}
+Age: 5029
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IeZ4tyWFwACZ%2BKUSG9d5OAAMAvBDvLwaO8Mi0HjeU0sPBwW56HT1wSlUWP06dPJjGXhi0KAAe%2BuJnJb%2FFkDeDug%2BHqTSXNxjWWe3UC%2FLQdMcBr1dLwouKNzFdw%3D%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 78b40d538f632d2f-DFW
+CF-RAY: 78b4693f98f92d4a-DFW
+Content-Encoding: gzip
+
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 18 Jan 2023 03:58:14 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 5029
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IeZ4tyWFwACZ%2BKUSG9d5OAAMAvBDvLwaO8Mi0HjeU0sPBwW56HT1wSlUWP06dPJjGXhi0KAAe%2BuJnJb%2FFkDeDug%2BHqTSXNxjWWe3UC%2FLQdMcBr1dLwouKNzFdw%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 78b4693f98f92d4a-DFW
 Content-Encoding: gzip
 
 {
