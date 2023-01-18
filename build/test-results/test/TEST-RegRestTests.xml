@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RegRestTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-18T04:19:12" hostname="DESKTOP-9ETNGU6" time="2.203">
+<testsuite name="RegRestTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-18T20:11:16" hostname="DESKTOP-9ETNGU6" time="152.958">
   <properties/>
-  <testcase name="putUserTest()" classname="RegRestTests" time="2.203"/>
-  <system-out><![CDATA[Request method:	PUT
-Request URI:	https://reqres.in/api/users/2
+  <testcase name="createUserTest()" classname="RegRestTests" time="152.958"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://reqres.in/api/users
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -16,30 +16,31 @@ Multiparts:		<none>
 Body:
 {
     "name": "morpheus",
-    "job": "zion resident"
+    "job": "leader"
 }
-HTTP/1.1 200 OK
-Date: Wed, 18 Jan 2023 04:19:15 GMT
+HTTP/1.1 201 Created
+Date: Wed, 18 Jan 2023 20:11:19 GMT
 Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
+Content-Length: 84
 Connection: keep-alive
 X-Powered-By: Express
 Access-Control-Allow-Origin: *
-Etag: W/"50-9p2nRj/pnZjgQfMwx9RpvCRN39s"
+Etag: W/"54-2u3sv9UvBBTo6sWe2FYuvqsubFY"
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E1%2FLbEFbH%2B5kY7b6itgZpYfx76jSoQOPGyYV5lXdZLxdQ5kxUOmbu8cxYVZdqqvX3zGeWxYh%2F50rwJZio63LYWYmBEk%2BFoqPeM6ncHlfo%2FaN%2FlYxRB0TDyr2lQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=p8EtRmYMf03fVkpFWQKDT8YAca%2FELiCyJEjkLGHyDClcs1Fojy%2Bq%2FXfQtCU051gI83eI6cxeKFYneIZVikAPdVuCou30od%2FhUITzh8ZTr1YL5or7lf6WGQ5KNg%3D%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 78b48801eab77c3d-LAX
-Content-Encoding: gzip
+CF-RAY: 78b9faa6bbef2e54-DFW
 
 {
     "name": "morpheus",
-    "job": "zion resident",
-    "updatedAt": "2023-01-18T04:19:15.114Z"
+    "job": "leader",
+    "id": "420",
+    "createdAt": "2023-01-18T20:11:19.679Z"
 }
+420
+leader
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

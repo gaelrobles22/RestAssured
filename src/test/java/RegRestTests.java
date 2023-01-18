@@ -3,13 +3,21 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
+import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+
+import static io.restassured.path.json.JsonPath.from;
 
 
 public class RegRestTests {
@@ -100,6 +108,72 @@ public class RegRestTests {
                 .jsonPath().getString("job");
 
         assertThat(jobUpdated,equalTo("zion resident"));
+    }
+
+    @Test
+    public void getAllUsersTest(){
+        Response response = given()
+                .get("users?page=2");
+
+        Headers headers = response.getHeaders();
+        int statusCode = response.getStatusCode();
+        String body = response.getBody().asString();
+        String contenType = response.getContentType();
+
+        assertThat(statusCode,equalTo(HttpStatus.SC_OK));
+        System.out.println("body" + body);
+        System.out.println("content type" + contenType);
+        System.out.println("Headers" + headers.toString());
+
+        System.out.println("********");
+        System.out.println(headers.get("Content-type"));
+        System.out.println(headers.get("Transfer-Encoding"));
+
+    }
+
+    @Test
+    public void getAllUsersTest2(){
+        String response = given()
+                .when()
+                .get("users?page=2")
+                .then()
+                .extract()
+                .body()
+                .asString();
+        int page = from(response).get("page");
+        int totalPages = from(response).get("total_pages");
+
+        int idFirstUser = from(response).get("data[0].id");
+
+        System.out.println("page: " + page );
+        System.out.println("total pages: " + totalPages);
+        System.out.println("id first user: "+ idFirstUser);
+
+        //Creamos una Lista donde obtenga los usuarios que tengan id mayor a 10
+        List<Map> usersWithIdGreaterThan10 = from(response).get("data.findAll { user -> user.id > 10 }");
+        String email = usersWithIdGreaterThan10.get(0).get("email").toString();
+
+
+        List<Map> user = from(response).get("data.findAll { user -> user.id > 10 && user.last_name == 'Howell'}");
+        String id = user.get(0).get("id").toString();
+    }
+
+    @Test
+    public void createUserTest() {
+        String response = given()
+                .when()
+                .body("{\n" +
+                        "    \"name\": \"morpheus\",\n" +
+                        "    \"job\": \"leader\"\n" +
+                        "}")
+                .post("users")
+                .then()
+                .extract()
+                .body()
+                .asString();
+        User user = from(response).getObject("",User.class);
+        System.out.println(user.getId());
+        System.out.println(user.getJob());
     }
 }
 
