@@ -1,26 +1,31 @@
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.hamcrest.Matchers.*;
 
 
 public class RegRestTests {
 
+    @Before
+    public void setup(){
+
+        RestAssured.baseURI = "https://reqres.in"; // El baseURI es el dominio sin el path, en este caso https://reqres.in
+        RestAssured.basePath = "/api"; // El basePath es la palabra que sigue despues del host en este caso /api
+    }
     @Test
     public void loginTest(){
 
         //Esta es una peticion POST y lleva un body de manera obligatoria y el metodo es .post en la URL
         RestAssured
                 .given()
-                .log()
-                .all()
                 .contentType(ContentType.JSON)
                 .body("{\n" +
                         "    \"email\": \"eve.holt@reqres.in\",\n" +
                         "    \"password\": \"cityslicka\"\n" +
                         "}")
-                .post("https://reqres.in/api/login")
+                .post("login")
                 .then()
                 .log()
                 .all()
@@ -39,7 +44,7 @@ public class RegRestTests {
                 .log()
                 .all()
                 .contentType(ContentType.JSON)
-                .get("https://reqres.in/api/users/2")
+                .get("users/2")
                 .then()
                 .log()
                 .all()
