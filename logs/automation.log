@@ -1,2 +1,15 @@
-2023-01-18T13:05:30,457 [Test worker] INFO  (RegRestTests.java:31) - Iniciando la configuracion
-2023-01-18T13:05:30,882 [Test worker] INFO  (RegRestTests.java:40) - Configuracion exitosa.
+2023-01-19T08:58:07,789 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T08:58:08,222 [Test worker] INFO  (ApplicationProperties.java:35) - Property file to read application-dev.properties
+2023-01-19T08:58:08,272 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+2023-01-19T09:14:15,607 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T09:14:16,011 [Test worker] INFO  (ApplicationProperties.java:35) - Property file to read application-dev.properties
+2023-01-19T09:14:16,055 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+2023-01-19T09:16:04,776 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T09:16:05,231 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+2023-01-19T09:16:44,948 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T09:16:45,383 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+2023-01-19T09:17:03,912 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T09:17:04,348 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+2023-01-19T09:17:59,281 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
+2023-01-19T09:17:59,673 [Test worker] INFO  (ApplicationProperties.java:35) - Property file to read application-dev.properties
+2023-01-19T09:17:59,718 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.

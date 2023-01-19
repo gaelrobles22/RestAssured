@@ -1,17 +1,22 @@
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.Filter;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
-import org.apache.http.Header;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -29,14 +34,7 @@ public class RegRestTests {
     public void setup(){
 
         logger.info("Iniciando la configuracion");
-
-        RestAssured.baseURI = "https://reqres.in"; // El baseURI es el dominio sin el path, en este caso https://reqres.in
-        RestAssured.basePath = "/api"; // El basePath es la palabra que sigue despues del host en este caso /api
-        RestAssured.filters(new RequestLoggingFilter(),new ResponseLoggingFilter());
-
-        RestAssured.requestSpecification =  new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
-                .build();
+        RestAssured.requestSpecification =  defaultRequestSpecification();
         logger.info("Configuracion exitosa.");
     }
     @Test
@@ -196,13 +194,43 @@ public class RegRestTests {
                 .body(user)
                 .post("register")
                 .then()
-                .statusCode(HttpStatus.SC_OK)
+                .spec(defaultResponseSpecification())
                 .contentType(equalTo("application/json; charset=utf-8"))
                 .extract()
                 .body()
                 .as(CreateUserResponse.class);
         assertThat(userResponse.getId(),equalTo(4));
         assertThat(userResponse.getToken(),equalTo("QpwL5tke4Pnpja7X4"));
+    }
+
+
+    //Con este metodo creamos las especificaciones default para el proyecto, tipo base y se pueden crear varias
+    private RequestSpecification defaultRequestSpecification(){
+
+        List<Filter> filters = new ArrayList<>();
+        filters.add(new RequestLoggingFilter());
+        filters.add(new ResponseLoggingFilter());
+
+        return new RequestSpecBuilder().setBaseUri("https://reqres.in")
+                .setBasePath("/api")
+                .addFilters(filters)
+                .setContentType(ContentType.JSON)
+                .build();
+    }
+
+    private RequestSpecification prodtRequestSpecification(){
+
+        return new RequestSpecBuilder().setBaseUri("https://prod.reqres.in")//es un ejemplo para tomar esta especificacion
+                .setBasePath("/api")
+                .setContentType(ContentType.JSON)
+                .build();
+    }
+
+    private ResponseSpecification defaultResponseSpecification(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_OK)
+                .expectContentType(ContentType.JSON)
+                .build();
     }
 
 }
