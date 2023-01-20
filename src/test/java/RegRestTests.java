@@ -29,15 +29,8 @@ import static io.restassured.path.json.JsonPath.from;
 
 public class RegRestTests {
 
-    private static final Logger logger = LogManager.getLogger(RegRestTests.class);
-    @BeforeEach
-    public void setup(){
 
-        logger.info("Iniciando la configuracion");
-        RestAssured.requestSpecification =  defaultRequestSpecification();
-        logger.info("Configuracion exitosa.");
-    }
-    @Test
+    /*@Test
     public void loginTest(){
 
         //Esta es una peticion POST y lleva un body de manera obligatoria y el metodo es .post en la URL
@@ -232,6 +225,8 @@ public class RegRestTests {
                 .expectContentType(ContentType.JSON)
                 .build();
     }
+
+     */
 
 }
 

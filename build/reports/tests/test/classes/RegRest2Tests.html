@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.428s</div>
+<div class="counter">2.476s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,148 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="getSingleUserTest()"></a>
-<h3 class="failures">getSingleUserTest()</h3>
-<span class="code">
-<pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at RegRest2Tests.getSingleUserTest(RegRest2Tests.java:14)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -213,20 +78,19 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 </tr>
 </thead>
 <tr>
-<td class="failures">getSingleUserTest()</td>
-<td class="failures">1.428s</td>
-<td class="failures">failed</td>
+<td class="success">getSingleUserTest()</td>
+<td class="success">2.476s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-01-19T09:17:59,281 [Test worker] INFO  (BaseTest.java:25) - Iniciando la configuracion
-2023-01-19T09:17:59,673 [Test worker] INFO  (ApplicationProperties.java:35) - Property file to read application-dev.properties
-2023-01-19T09:17:59,718 [Test worker] INFO  (BaseTest.java:27) - Configuracion exitosa.
+<pre>2023-01-19T15:38:49,896 [Test worker] INFO  (BaseTest.java:26) - Iniciando la configuracion
+2023-01-19T15:38:50,604 [Test worker] INFO  (BaseTest.java:28) - Configuracion exitosa.
 Request method:	GET
-Request URI:	https://reqres.in/C%3A%5CProgram%20Files%20%28x86%29%5CRazer%20Chroma%20SDK%5Cbin%3BC%3A%5CProgram%20Files%5CRazer%20Chroma%20SDK%5Cbin%3BC%3A%5CProgram%20Files%5CEclipse%20Adoptium%5Cjdk-17.0.3.7-hotspot%5Cbin%3BD%3A%5CProgram%20Files%5CJava%5Cbin%3BC%3A%5CProgram%20Files%5CCommon%20Files%5COracle%5CJava%5Cjavapath%3BC%3A%5CProgram%20Files%20%28x86%29%5CCommon%20Files%5COracle%5CJava%5Cjavapath%3BC%3A%5CProgram%20Files%20%28x86%29%5CRazer%5CChromaBroadcast%5Cbin%3BC%3A%5CProgram%20Files%5CRazer%5CChromaBroadcast%5Cbin%3BC%3A%5CWindows%5Csystem32%3BC%3A%5CWindows%3BC%3A%5CWindows%5CSystem32%5CWbem%3BC%3A%5CWindows%5CSystem32%5CWindowsPowerShell%5Cv1.0%5C%3BC%3A%5CWindows%5CSystem32%5COpenSSH%5C%3BC%3A%5CProgram%20Files%20%28x86%29%5CNVIDIA%20Corporation%5CPhysX%5CCommon%3BC%3A%5CProgram%20Files%20%28x86%29%5Cdotnet%5C%3BC%3A%5CWindows%5Csystem32%5Cconfig%5Csystemprofile%5CAppData%5CLocal%5CMicrosoft%5CWindowsApps%3BC%3A%5CProgram%20Files%5CEclipse%20Adoptium%5Cjdk-17.0.3.7-hotspot%5C%3BD%3A%5CProgram%20Files%5CGit%5Ccmd%3BD%3A%5CProgram%20Files%5CSdk%5Cplatform-tools%3BD%3A%5CProgram%20Files%5CSdk%5Ctools%3BD%3A%5CProgram%20Files%5CSdk%5Ctools%5Cbin%3BD%3A%5CProgram%20Files%5CMaven%5Capache-maven-3.8.6%5Cbin%3BD%3A%5CProgram%20Files%5Cnodejs%5C%3BD%3A%5CProgram%20Files%5CMaven%5Capache-maven-3.8.6%5Cbin%3BC%3A%5CProgram%20Files%5CMySQL%5CMySQL%20Shell%208.0%5Cbin%5C%3BC%3A%5CUsers%5Cgaelr%5CAppData%5CLocal%5CMicrosoft%5CWindowsApps%3BD%3A%5CMicrosoft%20VS%20Code%5Cbin%3BC%3A%5CUsers%5Cgaelr%5CAppData%5CLocal%5CGitHubDesktop%5Cbin%3BC%3A%5CWindows%5CSysWow64%5C%3BC%3A%5CUsers%5Cgaelr%5CAppData%5CRoaming%5Cnpm/users/2
+Request URI:	https://reqres.in/api/users/2
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -237,182 +101,38 @@ Headers:		Accept=*/*
 Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:			&lt;none&gt;
-HTTP/1.1 404 Not Found
-Date: Thu, 19 Jan 2023 17:18:02 GMT
-Content-Type: text/html; charset=utf-8
+HTTP/1.1 200 OK
+Date: Thu, 19 Jan 2023 23:38:52 GMT
+Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 X-Powered-By: Express
 Access-Control-Allow-Origin: *
+Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
 Via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=fe64g33frnE0CJiteuBNWbXLO2GQSYBAQRT8J3Hlx5utVfz%2BNEPmtrdJUnY5ycz7WfJ6%2FBFL6MkGc2n4G%2F0QKgLje%2B7buIhEsAu1Sqk%2Fhtl059ZNgolDv2nTUg%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 4941
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=KilZix6NR3n%2BlTcaMehP2%2FKZMLB8dMjAkEy7Ti87HUpF%2BmAnqLIozjvFSSsD8zosloK6IWlP5gpF50L%2BY%2Fx9GwxdnYfjt2M8C3VnifFEJKoEt0zQbRfRhDNteQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 78c13a315bfee6f6-DFW
+CF-RAY: 78c3680b799ae7cf-DFW
 Content-Encoding: gzip
 
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;script&gt;
-            ;(function (w, d, s, l, i) {
-                w[l] = w[l] || []
-                w[l].push({
-                    'gtm.start': new Date().getTime(),
-                    event: 'gtm.js',
-                })
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != 'dataLayer' ? '&amp;amp;l=' + l : ''
-                j.async = true
-                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-                f.parentNode.insertBefore(j, f)
-            })(window, document, 'script', 'dataLayer', 'GTM-KB622KF')
-        &lt;/script&gt;
-    &lt;script src=&quot;https://js.stripe.com/v3/&quot;/&gt;
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0&quot;/&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;A hosted REST-API ready to respond to your AJAX requests&quot;/&gt;
-    &lt;title&gt;
-            Reqres - A hosted REST-API ready to respond to your AJAX requests
-        &lt;/title&gt;
-    &lt;link href=&quot;//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/app.css&quot;/&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;//m.servedby-buysellads.com/monetization.custom.js&quot;/&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class=&quot;header-content&quot;&gt;
-      &lt;header class=&quot;main-header&quot;&gt;
-        &lt;section class=&quot;wrap&quot;&gt;
-          &lt;h1 class=&quot;logo&quot;&gt;
-            &lt;a shape=&quot;rect&quot; href=&quot;/&quot;&gt;
-              &lt;img src=&quot;/img/logo.png&quot; alt=&quot;&quot;/&gt;
-            &lt;/a&gt;
-          &lt;/h1&gt;
-        &lt;/section&gt;
-      &lt;/header&gt;
-      &lt;main class=&quot;the-sell&quot;&gt;
-        &lt;div class=&quot;wrap&quot;&gt;
-          &lt;h2 class=&quot;tagline&quot;&gt;
-                        Test your front-end against a real API
-                    &lt;/h2&gt;
-          &lt;section class=&quot;key-sells&quot;&gt;
-            &lt;div class=&quot;sell&quot;&gt;
-              &lt;div class=&quot;v-center&quot;&gt;
-                &lt;h3&gt;Fake data&lt;/h3&gt;
-                &lt;p&gt;
-                                    No more tedious sample data creation, we've
-                                    got it covered.
-                                &lt;/p&gt;
-              &lt;/div&gt;
-              &lt;i class=&quot;fa fa-cloud-download&quot;/&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;sell&quot;&gt;
-              &lt;div class=&quot;v-center&quot;&gt;
-                &lt;h3&gt;Real responses&lt;/h3&gt;
-                &lt;p&gt;
-                                    Develop with real response codes. GET, POST,
-                                    PUT &amp;amp; DELETE supported.
-                                &lt;/p&gt;
-              &lt;/div&gt;
-              &lt;i class=&quot;fa fa-code&quot;/&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;sell&quot;&gt;
-              &lt;div class=&quot;v-center&quot;&gt;
-                &lt;h3&gt;Always-on&lt;/h3&gt;
-                &lt;p&gt;
-
-                                    24/7                   &lt;strong&gt;
-                    &lt;em&gt;free&lt;/em&gt;
-                  &lt;/strong&gt;
- access
-                                    in your development phases. Go nuts.
-                                                &lt;/p&gt;
-              &lt;/div&gt;
-              &lt;i class=&quot;fa fa-toggle-on&quot;/&gt;
-            &lt;/div&gt;
-          &lt;/section&gt;
-          &lt;h2 class=&quot;tagline&quot;&gt;
-                        A hosted REST-API ready to respond to your AJAX
-                        requests.
-                    &lt;/h2&gt;
-          &lt;div class=&quot;t-center main-arrow&quot;&gt;
-            &lt;i class=&quot;fa fa-arrow-circle-down&quot;/&gt;
-          &lt;/div&gt;
-          &lt;script id=&quot;_carbonads_js&quot; async=&quot;async&quot; type=&quot;text/javascript&quot; src=&quot;//cdn.carbonads.com/carbon.js?serve=CE7D6K3E&amp;amp;placement=reqresin&quot;/&gt;
-        &lt;/div&gt;
-      &lt;/main&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;container&quot;&gt;404&lt;/div&gt;
-    &lt;footer&gt;
-      &lt;div class=&quot;wrap&quot;&gt;
-        &lt;hr class=&quot;dark&quot;/&gt;
-        &lt;p class=&quot;t-center&quot;&gt;
-
-                    Made for developers and designers by
-                              &lt;a shape=&quot;rect&quot; href=&quot;https://benhowdle.im&quot;&gt;Ben Howdle&lt;/a&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/footer&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js&quot;/&gt;
-    &lt;script src=&quot;/js/app.js&quot;/&gt;
-    &lt;script async=&quot;async&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-174008107-1&quot;/&gt;
-    &lt;script&gt;
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-                dataLayer.push(arguments)
-            }
-            gtag('js', new Date())
-
-            gtag('config', 'UA-174008107-1')
-        &lt;/script&gt;
-    &lt;script&gt;
-            ;(function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r
-                ;(i[r] =
-                    i[r] ||
-                    function () {
-                        ;(i[r].q = i[r].q || []).push(arguments)
-                    }),
-                    (i[r].l = 1 * new Date())
-                ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-                a.async = 1
-                a.src = g
-                m.parentNode.insertBefore(a, m)
-            })(
-                window,
-                document,
-                'script',
-                '//www.google-analytics.com/analytics.js',
-                'ga'
-            )
-
-            ga('create', 'UA-55888877-1', 'auto')
-            ga('send', 'pageview')
-        &lt;/script&gt;
-    &lt;script&gt;
-            ;(function () {
-                if (typeof _bsa !== 'undefined' &amp;amp;&amp;amp; _bsa) {
-                    _bsa.init(
-                        'custom',
-                        'CEBIP53J',
-                        'placement:reqresin-sponsor',
-                        {
-                            target: '#impeccable-js',
-                            template: `
-        &amp;lt;a href=&quot;##link##&quot; rel=&quot;sponsored noopener&quot; target=&quot;_blank&quot; title=&quot;##company## — ##tagline##&quot;&amp;gt;
-        &amp;lt;img src=&quot;##logo##&quot; style=&quot;background-color: ##backgroundColor##&quot;&amp;gt;
-        &amp;lt;div class=&quot;sponsor-description&quot;&amp;gt;##description##&amp;lt;/div&amp;gt;
-        &amp;lt;div class=&quot;sponsor-cta&quot; style=&quot;background-color: ##backgroundColor##; color: ##textColor##&quot;&amp;gt;##callToAction##&amp;lt;/div&amp;gt;
-        &amp;lt;/a&amp;gt;
-        `,
-                        }
-                    )
-                }
-            })()
-        &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+{
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
+        &quot;first_name&quot;: &quot;Janet&quot;,
+        &quot;last_name&quot;: &quot;Weaver&quot;,
+        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
+    },
+    &quot;support&quot;: {
+        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+    }
+}
 </pre>
 </span>
 </div>
@@ -424,7 +144,7 @@ Content-Encoding: gzip
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 19 ene. 2023 09:18:01</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 19 ene. 2023 15:38:53</p>
 </div>
 </div>
 </body>
