@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RegRest2Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-19T23:38:50" hostname="DESKTOP-9ETNGU6" time="2.476">
+  <properties/>
+  <testcase name="getSingleUserTest()" classname="RegRest2Tests" time="2.476"/>
+  <system-out><![CDATA[2023-01-19T15:38:49,896 [Test worker] INFO  (BaseTest.java:26) - Iniciando la configuracion
+2023-01-19T15:38:50,604 [Test worker] INFO  (BaseTest.java:28) - Configuracion exitosa.
+Request method:	GET
+Request URI:	https://reqres.in/api/users/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 19 Jan 2023 23:38:52 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 4941
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KilZix6NR3n%2BlTcaMehP2%2FKZMLB8dMjAkEy7Ti87HUpF%2BmAnqLIozjvFSSsD8zosloK6IWlP5gpF50L%2BY%2Fx9GwxdnYfjt2M8C3VnifFEJKoEt0zQbRfRhDNteQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 78c3680b799ae7cf-DFW
+Content-Encoding: gzip
+
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
